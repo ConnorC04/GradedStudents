@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Classroom {
 
-    private Student[] students;
+    private ArrayList<Student> students;
     private Integer maxStudents;
 
     public Classroom(){
@@ -14,9 +14,15 @@ public class Classroom {
         this.maxStudents = maxStudents;
     }
 
-    public Classroom(Student[] students){
+    public Classroom(ArrayList<Student> students){
         this.students = students;
     }
 
+    public Integer getStudents(){
+        return students.size();
+    }
 
+    public void addStudents(Student student){
+        students.add(student);
+    }
 }
