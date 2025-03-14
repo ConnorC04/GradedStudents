@@ -1,5 +1,4 @@
 package io.zipcoder;
-
 import java.util.ArrayList;
 
 
@@ -7,20 +6,19 @@ public class Student {
 
     private String firstName;
     private String lastName;
-    private ArrayList<Double> examScores = new ArrayList<>();
+    private ArrayList<Double> examScores;
 
-    public Student(String firstName, String lastName, ArrayList<Double> examScores){
+    public Student(String firstName, String lastName, ArrayList<Double> examScores) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.examScores = examScores;
     }
 
-
-    public void setFirstName(){
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public void setLastName(){
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
@@ -40,5 +38,7 @@ public class Student {
         return examScores;
     }
 
-
+    public void addExamScore(Double newScore) {
+        examScores.add(newScore);
+    }
 }
